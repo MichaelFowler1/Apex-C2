@@ -1,21 +1,29 @@
-import numpy as np
 import time
+import numpy as np
 
-def generate_synthetic_ew_environment(nominal_signal, jammer_active, attack_type="barrage"):
+def apply_ew_environment(nominal_signal, is_jammed=False, attack_profile="barrage"):
     """
-    Simulates the RF environment at the satellite's receiver array.
+    Mixes nominal telemetry with simulated RF interference at the receiver.
     """
-    noise_floor = np.random.normal(0, 0.5) # Natural cosmic background noise
+    # Always apply baseline cosmic/thermal noise floor
+    noise_floor = np.random.normal(0, 0.5)
     
-    if not jammer_active:
+    if not is_jammed:
         return nominal_signal + noise_floor
+
+    # --- ACTIVE JAMMER LOGIC ---
+    
+    if attack_profile == "barrage":
+        # Sledgehammer approach: high-amplitude white noise to crush the SNR
+        barrage_noise = np.random.normal(0, 50.0)
+        return nominal_signal + barrage_noise
         
-    if attack_type == "barrage":
-        # High-amplitude white noise to drown out the C2 link
-        jamming_signal = np.random.normal(0, 50.0) 
-        return nominal_signal + jamming_signal
+    elif attack_profile == "spoofing":
+        # Finesse approach: smooth sine wave to mimic a rhythmic hardware fault (e.g., gyro spin)
+        spoof_wave = 20 * np.sin(time.time())
+        return nominal_signal + spoof_wave
         
-    elif attack_type == "spoofing":
-        # Injecting a synthetic sine wave to mimic a rhythmic thruster misfire
-        synthetic_anomaly = 20 * np.sin(time.time())
-        return nominal_signal + synthetic_anomaly
+    else:
+        # Catch-all just in case we pass a typo during testing
+        print(f"[!] WARNING: EW profile '{attack_profile}' not recognized. Defaulting to standard noise.")
+        return nominal_signal + noise_floor
