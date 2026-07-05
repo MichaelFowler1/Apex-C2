@@ -6,6 +6,10 @@ This repository contains the Phase 1 architecture for a Software-in-the-Loop (SI
 
 By utilizing Kerbal Space Program (KSP) via kRPC as a high-fidelity physics surrogate, this project models realistic orbital mechanics, signal degradation, and hardware constraints.
 
+![Apex-C2: AOS gatekeeper, CCSDS injection, autonomous recovery](docs/hero.png)
+
+*Top panel: real orbital geometry from `physical-range/physical pipeline.py` (`get_link_metrics`) — the AOS window is the only time the Red Team may inject. Bottom panel: the documented attack → autonomous-recovery sequence (SAS disabled, Vanguard FSW restores it, MTTR < 1s). Regenerate with `python make_hero.py`.*
+
 ## System Architecture: The Triad
 
 The environment is built on a tripartite architecture, ensuring that adversarial tests are constrained by the physical realities of spaceflight.
