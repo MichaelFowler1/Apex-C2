@@ -1,0 +1,5 @@
+# Pinned from the project's working virtualenv for reproducibility.
+krpc==0.5.4
+numpy==2.4.4
+pandas==3.0.2
+scikit-learn==1.8.0
