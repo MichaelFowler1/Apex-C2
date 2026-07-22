@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "Apex-C2"
+abstract: "A Software-in-the-Loop (SITL) simulation framework for autonomous satellite self-healing. Features local-first Flight Software (FSW) with ML-based anomaly detection to autonomously recover from adversarial C2 command injections in a physics-accurate orbital environment."
+authors:
+  - family-names: "Fowler"
+    given-names: "Michael"
+    alias: "MichaelFowler1"
+repository-code: "https://github.com/MichaelFowler1/Apex-C2"
+url: "https://github.com/MichaelFowler1/Apex-C2"
+license: "Apache-2.0"
+date-released: "2026-05-10"
