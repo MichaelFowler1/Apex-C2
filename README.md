@@ -1,5 +1,7 @@
 # Operation Phoenix Vanguard: Autonomous Orbital C2 and Recovery
 
+[![tests](https://github.com/MichaelFowler1/Apex-C2/actions/workflows/tests.yml/badge.svg)](https://github.com/MichaelFowler1/Apex-C2/actions/workflows/tests.yml)
+
 ## Overview
 
 This repository contains the Phase 1 architecture for a Software-in-the-Loop (SITL) simulation designed to test autonomous satellite self-healing in a contested command and control (C2) environment. The primary objective is to demonstrate that on-board, local-first logic can detect and recover from adversarial command injections faster than traditional ground-based human-in-the-loop systems.
