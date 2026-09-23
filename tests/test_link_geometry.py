@@ -1,3 +1,6 @@
+# Copyright 2026 Michael Fowler
+# SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
+
 """The LOS/AOS gatekeeper's authority comes from get_link_metrics: if the
 geometry is wrong, the 5-degree elevation mask gates on garbage. These tests
 check it against closed-form cases where the answer is known exactly."""

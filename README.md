@@ -49,3 +49,15 @@ The next iteration of Phoenix Vanguard will transition from discrete command inj
 * **Synthetic Signal Degradation:** Developing a mathematical model to simulate Barrage Jamming (white noise flooding to degrade the Signal-to-Noise Ratio) and Smart Spoofing (injecting rhythmic false telemetry).
 * **Advanced Countermeasures:** Upgrading the Vanguard HUMS to not only detect anomalies but classify the attack vector, triggering physical simulated countermeasures such as RF decoys or frequency hopping logic.
 * **Cryptographic OPSEC:** Hardening the SITL range itself by implementing AES-256 encryption and mutual TLS (mTLS) on the telemetry pipes to enforce zero-trust principles during testing operations.
+
+## License
+
+Everything in this repository from this change on is under the
+[PolyForm Noncommercial License 1.0.0](LICENSE). Earlier commits were released
+under the Apache License 2.0 and stay under it. In plain terms: it is free for
+any noncommercial purpose, and for schools and universities, public research
+organizations, government institutions and charities, whatever their funding.
+Commercial use needs a license from the author: ask through
+[the issue tracker](https://github.com/MichaelFowler1/Apex-C2/issues). Anyone who
+passes on a copy has to pass on the license and the `Required Notice:` line in
+[NOTICE](NOTICE). This is a plain summary; the LICENSE file is what governs.

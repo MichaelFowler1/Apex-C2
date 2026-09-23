@@ -1,3 +1,6 @@
+# Copyright 2026 Michael Fowler
+# SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
+
 """The autonomous-recovery claim rests on the edge model actually flagging a
 hard fault. Train on synthetic nominal telemetry (slow steady drain), then
 present an adversarial-grade drain and require the IsolationForest to flag it."""

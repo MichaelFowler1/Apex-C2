@@ -1,3 +1,6 @@
+# Copyright 2026 Michael Fowler
+# SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
+
 """Several source files have spaces in their names (range convention:
 'physical pipeline.py'), so tests load them by path instead of import name.
 krpc must be installed for the imports to resolve, but no KSP instance is
